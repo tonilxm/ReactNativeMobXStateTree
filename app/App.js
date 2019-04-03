@@ -1,41 +1,26 @@
 import React, {Component} from 'react';
 import { Provider } from "mobx-react"
 import AppNavigation from './navigation/AppNavigation'
-import { setupRootStore } from './stores/SetupRootStore'
-import BookStore from "./stores/BookStore";
-
+import { setupStores } from "./stores/SetupStores";
 
 export default class App extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      rootStore: {}
-    }
-  }
-
-  /**
-   * When the component is mounted. This happens asynchronously and simply
-   * re-renders when we're good to go.
-   */
+  state = { stores: {} }
+  
   async componentDidMount() {
     this.setState({
-      rootStore: await setupRootStore(),
+      stores: await setupStores(),
     })
   }
-
+  
+  isEmpty = (store) =>  Object.keys(store).length === 0 && store.constructor === Object
+  
   render() {
-    const { rootStore } = this.state
-
-    if (!rootStore) {
-      return null
-    }
-
-    const otherStores = {
-      BookStore,
-    }
-
+    const { stores } = this.state;
+    
+    if(this.isEmpty(stores)) return null;
+    
     return (
-      <Provider rootStore={rootStore} {...otherStores}>
+      <Provider {...stores}>
         <AppNavigation />
       </Provider>
     );

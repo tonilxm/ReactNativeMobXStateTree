@@ -30,13 +30,19 @@ const create = (baseURL = 'https://localhost:84/') => {
 
     return api.get('/account')
   }
+  
+  const getLog = (text) => {
+    console.log(text)
+  }
+  
   return {
     // a list of the API functions from step 2
     getRoot,
     getRate,
     getUser,
     getToken,
-    getAccount
+    getAccount,
+    getLog
   }
 }
 
