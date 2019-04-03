@@ -1,6 +1,6 @@
 import { createStackNavigator, createAppContainer } from 'react-navigation'
-import AddBookScreen from './screens/AddBookScreen'
-import LoginScreen from "./screens/LoginScreen"
+import AddBookScreen from '../screens/AddBookScreen'
+import LoginScreen from "../screens/LoginScreen"
 
 // Manifest of possible screens
 const PrimaryNav = createStackNavigator({

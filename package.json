@@ -10,6 +10,7 @@
     "android": "react-native run-android"
   },
   "dependencies": {
+    "apisauce": "^1.0.2",
     "babel-plugin-transform-decorators-legacy": "^1.3.5",
     "mobx": "^5.9.4",
     "mobx-react": "^5.4.3",
@@ -19,8 +20,8 @@
     "react": "16.8.3",
     "react-native": "0.59.2",
     "react-native-gesture-handler": "^1.1.0",
-    "react-navigation": "^3.6.0",
-    "react-native-vector-icons": "latest"
+    "react-native-vector-icons": "latest",
+    "react-navigation": "^3.6.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.0",

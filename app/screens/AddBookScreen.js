@@ -32,7 +32,7 @@ export default class AddBookScreen extends Component<Props> {
   render() {
     const { books } = BookStore
 
-    if(books.length > 0) {
+    if(books && books.length > 0) {
       BookStore.authorBy('Toni').forEach(book => console.log(book.title))
     }
 
@@ -43,7 +43,7 @@ export default class AddBookScreen extends Component<Props> {
         <TextInput value={this.state.author} style={{ borderColor: 'black',  borderWidth: 5, height: 40, minWidth: 300, marginTop: 20}} onChangeText={(value)=>this.onChangeText("author", value)}/>
         <Button title='Add Book' onPress={()=>this.addBook(this.state.title, this.state.author)}/>
 
-        {
+        {books &&
           books.map((book, idx) =>  {
             return(
               <React.Fragment key={idx}>
