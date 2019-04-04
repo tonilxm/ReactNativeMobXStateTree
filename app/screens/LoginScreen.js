@@ -7,10 +7,6 @@ import { Button, Text, Form, Item, Input } from 'native-base'
 import Icon from 'react-native-vector-icons/FontAwesome'
 
 class LoginScreen extends Component {
-  static propTypes = {
-
-  };
-
   keyboardDidShowListener = {};
   keyboardDidHideListener = {};
 
