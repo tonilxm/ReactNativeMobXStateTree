@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native'
-import { Colors, Metrics } from '../../themes'
+import { Colors, Metrics } from '../../../themes'
 
 export default StyleSheet.create({
   container: {
@@ -9,5 +9,6 @@ export default StyleSheet.create({
     backgroundColor: Colors.background,
     justifyContent: 'center'
   },
-  lowerContent: { flex: 1, flexDirection: 'row', justifyContent: 'space-around'}
+  lowerContent: { flex: 1, flexDirection: 'row', justifyContent: 'space-around'},
+  body: { flex: 1, backgroundColor: Colors.snow}
 })

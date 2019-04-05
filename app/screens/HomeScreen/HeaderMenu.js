@@ -3,7 +3,6 @@ import { View, Text } from 'react-native'
 import Styles from './styles/HeaderMenuStyles'
 import AntIcon from 'react-native-vector-icons/dist/AntDesign';
 import Feather from 'react-native-vector-icons/dist/Feather';
-import { Colors, Fonts } from '../themes';
 
 class Header extends Component {
   constructor (props) {
