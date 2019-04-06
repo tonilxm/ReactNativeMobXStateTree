@@ -1,5 +1,4 @@
 import { StyleSheet, Dimensions, Platform } from 'react-native';
-import { colors } from '../../../screens/HomeScreen/styles/HomeScreenStyles';
 import { Colors } from '../../../themes';
 
 const IS_IOS = Platform.OS === 'ios';
@@ -10,14 +9,14 @@ function wp (percentage) {
     return Math.round(value);
 }
 
-const slideHeight = viewportHeight * 0.25;
+const slideHeight = viewportHeight * 0.20;
 const slideWidth = wp(75);
 const itemHorizontalMargin = wp(2);
 
 export const sliderWidth = viewportWidth;
 export const itemWidth = slideWidth + itemHorizontalMargin * 2;
 
-const entryBorderRadius = 8;
+const entryBorderRadius = 5;
 
 export default StyleSheet.create({
     slideInnerContainer: {
@@ -69,9 +68,9 @@ export default StyleSheet.create({
     },
     textContainer: {
         justifyContent: 'center',
-        paddingTop: 15 - entryBorderRadius,
-        paddingBottom: 15,
-        paddingHorizontal: 16,
+        paddingTop: 8 - entryBorderRadius,
+        paddingBottom: 8,
+        paddingHorizontal: 10,
         backgroundColor: Colors.snow,
         borderBottomLeftRadius: entryBorderRadius,
         borderBottomRightRadius: entryBorderRadius
@@ -81,7 +80,7 @@ export default StyleSheet.create({
     },
     title: {
         color: Colors.black,
-        fontSize: 13,
+        fontSize: 12,
         fontWeight: 'bold',
         letterSpacing: 0.5
     },

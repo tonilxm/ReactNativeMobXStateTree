@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { View, Text } from 'react-native'
 import Styles from './styles/HeaderMenuStyles'
-import AntIcon from 'react-native-vector-icons/dist/AntDesign';
-import Feather from 'react-native-vector-icons/dist/Feather';
+import AntIcon from 'react-native-vector-icons/dist/AntDesign'
+import Feather from 'react-native-vector-icons/dist/Feather'
 
 class Header extends Component {
   constructor (props) {
@@ -13,6 +14,7 @@ class Header extends Component {
   }
   
   render () {
+    const {title} = this.props;
     return (
       <View style={Styles.container}>
         <View style={Styles.upperContent}>
@@ -22,7 +24,7 @@ class Header extends Component {
                 </View>
             </View>
             <View style={Styles.centerUpperContent}>
-                <Text style={Styles.title}>BiroKu</Text>
+                <Text style={Styles.title}>{title}</Text>
             </View>
             <View style={Styles.rightUpperContent}>
                 <AntIcon style={Styles.icon} name='bells'></AntIcon>
@@ -42,6 +44,10 @@ class Header extends Component {
       </View>
     )
   }
+}
+
+Header.propTypes = {
+  title: PropTypes.string.isRequired
 }
 
 export default Header

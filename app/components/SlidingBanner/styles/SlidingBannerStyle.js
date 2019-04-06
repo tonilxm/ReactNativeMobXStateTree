@@ -2,17 +2,8 @@ import { StyleSheet } from 'react-native'
 import { Colors, Metrics } from '../../../themes'
 
 export default StyleSheet.create({
-  gradient: {
-      ...StyleSheet.absoluteFillObject
-  },
-  exampleContainer: {
+  container: {
     backgroundColor: Colors.background
-  },
-  exampleContainerDark: {
-      backgroundColor: Colors.black
-  },
-  exampleContainerLight: {
-      backgroundColor: Colors.white
   },
   title: {
       paddingHorizontal: 30,

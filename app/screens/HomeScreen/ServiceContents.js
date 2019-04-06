@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
-import { StyleSheet, View, Text } from 'react-native'
+import { View } from 'react-native'
 import Swiper from 'react-native-swiper'
+import { Images } from '../../themes'
+import Styles from './styles/ServiceContentStyle'
+import { ImageButton } from '../../components/ImageButton';
 
 class ServiceContent extends Component {
   constructor (props) {
@@ -12,54 +15,24 @@ class ServiceContent extends Component {
 
   render () {
     return (
-      <Swiper style={styles.wrapper}
-        dot={<View style={{backgroundColor: 'rgba(255,255,255,.3)', width: 13, height: 13, borderRadius: 7, marginLeft: 7, marginRight: 7}} />}
-        activeDot={<View style={{backgroundColor: '#fff', width: 13, height: 13, borderRadius: 7, marginLeft: 7, marginRight: 7}} />}
-        paginationStyle={{
-          bottom: 70
-        }}
-      loop={false}>
-        <View style={styles.slide1}>
-          <Text style={styles.text}>Hello Swiper</Text>
-        </View>
-        <View style={styles.slide2}>
-          <Text style={styles.text}>Beautiful</Text>
-        </View>
-        <View style={styles.slide3}>
-          <Text style={styles.text}>And simple</Text>
+      <Swiper style={Styles.container}
+        dot={<View style={Styles.dot} />}
+        activeDot={<View style={Styles.activeDot} />}
+        paginationStyle={{ bottom: 0 }}
+        loop={false}>
+        <View style={Styles.slideContent}>
+          <ImageButton icon={Images.house} label='Sewa Rumah' style={Styles.button}/>
+          <ImageButton icon={Images.apartment} label='Sewa Apartement' style={Styles.button}/>
+          <ImageButton icon={Images.bedroom} label='Sewa Kostan' style={Styles.button}/>
+          <ImageButton icon={Images.car} label='Sewa Mobil' style={Styles.button}/>
+          <ImageButton icon={Images.motor} label='Sewa Motor' style={Styles.button}/>
+          <ImageButton icon={Images.babysitter} label='Sewa BabySitter' style={Styles.button}/>
+          <ImageButton icon={Images.servant} label='Sewa Assiten RT' style={Styles.button}/>
+          <ImageButton icon={Images.heavy} label='Sewa Alat Berat' style={Styles.button}/>
         </View>
       </Swiper>
     )
   }
 }
-
-const styles = StyleSheet.create({
-  wrapper: {
-    
-  },
-  slide1: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#9DD6EB',
-  },
-  slide2: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#97CAE5',
-  },
-  slide3: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#92BBD9',
-  },
-  text: {
-    color: '#fff',
-    fontSize: 30,
-    fontWeight: 'bold',
-  }
-})
 
 export default ServiceContent

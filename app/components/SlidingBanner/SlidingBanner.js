@@ -1,14 +1,12 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 
-import { Platform, View, Text } from 'react-native'
+import { Platform, View } from 'react-native'
 import Carousel, { Pagination } from 'react-native-snap-carousel'
 import { sliderWidth, itemWidth } from './styles/SlideEntry.style'
 import SliderEntry from './SliderEntry'
 import styles from './styles/SlidingBannerStyle'
 import { Colors } from '../../themes'
-
-
 
 class SlidingBanner extends Component {
   constructor (props) {
@@ -33,7 +31,7 @@ class SlidingBanner extends Component {
     const { data, withPagination } = this.props;
     const { slider1ActiveSlide } = this.state;
     return (
-      <View style={styles.exampleContainer}>
+      <View style={styles.container}>
             <Carousel
               ref={c => this._slider1Ref = c}
               data={data}
