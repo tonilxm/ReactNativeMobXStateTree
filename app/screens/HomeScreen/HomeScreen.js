@@ -10,7 +10,8 @@ import Styles from './styles/HomeScreenStyles'
 import HeaderMenu from './HeaderMenu'
 import ServiceContent from './ServiceContents';
 import Promos from "./Promos";
-
+import Recommendations from './Recommendations';
+import PromotionBanners from "./PromotionBanners";
 
 class HomeScreen extends Component {
   constructor (props) {
@@ -28,11 +29,14 @@ class HomeScreen extends Component {
         <View style={Styles.body}>
           <ScrollView
             style={{ }}
+            showsVerticalScrollIndicator={false}
             scrollEventThrottle={200}
             directionalLockEnabled={true}>
-              <SlidingBanner data={Banners} withPagination={false} />
+              {/*<SlidingBanner data={Banners} withPagination={false} /> */}
+              <PromotionBanners />
               <ServiceContent/>
               <Promos/>
+              <Recommendations/>
           </ScrollView>
         </View>
       </View>

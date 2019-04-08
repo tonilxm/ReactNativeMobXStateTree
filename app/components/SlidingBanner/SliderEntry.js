@@ -35,8 +35,7 @@ export default class SliderEntry extends Component {
     }
 
     render () {
-        const { data: { title, subtitle }, even } = this.props;
-
+        const { onClick, data: { title, subtitle }, even } = this.props;
         const uppercaseTitle = title ? (
             <Text
               style={[styles.title, even ? styles.titleEven : {}]}
@@ -50,9 +49,8 @@ export default class SliderEntry extends Component {
             <TouchableOpacity
               activeOpacity={1}
               style={styles.slideInnerContainer}
-              onPress={() => { alert(`You've clicked '${title}'`); }}
-              >
-                <View style={styles.shadow} />
+              onPress={onClick}>
+              <View style={styles.shadow} />
                 <View style={[styles.imageContainer, even ? styles.imageContainerEven : {}]}>
                     { this.image }
                     <View style={[styles.radiusMask, even ? styles.radiusMaskEven : {}]} />

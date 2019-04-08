@@ -11,7 +11,8 @@ export default StyleSheet.create({
     flexDirection: 'column',
     backgroundColor: Colors.snow,
     justifyContent: 'center',
-    paddingHorizontal: 10
+    paddingHorizontal: 10,
+    paddingVertical: 5
   },
 
   title: { fontSize: Fonts.size.h6, fontWeight: 'bold', letterSpacing: 0.6, color: Colors.black },

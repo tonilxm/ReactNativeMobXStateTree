@@ -3,7 +3,6 @@ import {View, Text, ScrollView, Image, TouchableWithoutFeedback} from 'react-nat
 import Styles from './styles/PromosStyles'
 import Images from "../../themes/Images"
 import { Button } from '../../components/Button';
-import { Colors, Fonts } from '../../themes';
 
 class Promos extends Component {
   constructor (props) {
@@ -11,10 +10,6 @@ class Promos extends Component {
     this.state = {
        
     }
-  }
-
-  _onPressButton() {
-    alert('Test')
   }
 
   render () {
@@ -37,6 +32,22 @@ class Promos extends Component {
               <Text style={Styles.description}>Rp.15jt/Thn</Text>
             </View>
           </View>
+          <View style={Styles.contentItem}>
+            <View style={Styles.imageContainer}>
+              <Image style={Styles.image} source={Images.car2} resizeMode='cover'resizeMethod='scale'/>
+            </View>
+            <View style={Styles.descriptionContentItem}>
+              <Text style={Styles.description}>Rp.300rb/Hr</Text>
+            </View>
+          </View>
+          <View style={Styles.contentItem}>
+            <View style={Styles.imageContainer}>
+              <Image style={Styles.image} source={Images.motor6} resizeMode='cover'resizeMethod='scale'/>
+            </View>
+            <View style={Styles.descriptionContentItem}>
+              <Text style={Styles.description}>Rp.50rb/Hr</Text>
+            </View>
+          </View>
           <View style={Styles.contentItem }>
            <View style={Styles.imageContainer}>
               <Image style={Styles.image} source={Images.house2} resizeMode='cover'resizeMethod='scale'/>
@@ -45,20 +56,20 @@ class Promos extends Component {
               <Text style={Styles.description}>Rp.16jt/Thn</Text>
             </View>
           </View>
-          <View style={Styles.contentItem}>
-            <View style={Styles.imageContainer}>
-              <Image style={Styles.image} source={Images.house3} resizeMode='cover'resizeMethod='scale'/>
+          <View style={Styles.contentItem }>
+           <View style={Styles.imageContainer}>
+              <Image style={Styles.image} source={Images.motor1} resizeMode='cover'resizeMethod='scale'/>
             </View>
             <View style={Styles.descriptionContentItem}>
-              <Text style={Styles.description}>Rp.13jt/Thn</Text>
+              <Text style={Styles.description}>Rp.60rb/Hr</Text>
             </View>
           </View>
-          <View style={Styles.contentItem}>
-            <View style={Styles.imageContainer}>
+          <View style={Styles.contentItem }>
+           <View style={Styles.imageContainer}>
               <Image style={Styles.image} source={Images.house4} resizeMode='cover'resizeMethod='scale'/>
             </View>
             <View style={Styles.descriptionContentItem}>
-              <Text style={Styles.description}>Rp.9jt/Thn</Text>
+              <Text style={Styles.description}>Rp.35jt/Thn</Text>
             </View>
           </View>
         </ScrollView>
