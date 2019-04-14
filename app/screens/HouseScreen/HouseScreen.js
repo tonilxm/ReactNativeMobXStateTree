@@ -6,7 +6,7 @@ import Styles from './styles/HouseScreenStyle'
 import Header from '../../components/Header/Header';
 import AntIcon from 'react-native-vector-icons/dist/AntDesign'
 import { Colors } from '../../themes';
-import {  } from 'react-native-gesture-handler';
+import MapView from 'react-native-maps';
 
 class HouseScreen extends Component {
   constructor(props) {
@@ -47,6 +47,18 @@ class HouseScreen extends Component {
               scrollEventThrottle={200}
               directionalLockEnabled={true}>
             <ImageSwiper images={house.images}/>
+            <View style={{ height: 300, width: 'auto' }}>
+              <MapView
+                style={{flex: 1}}
+                region={{
+                  latitude: 42.882004,
+                  longitude: 74.582748,
+                  latitudeDelta: 0.0922,
+                  longitudeDelta: 0.0421
+                }}
+                showsUserLocation={true}
+              />
+            </View>
           </ScrollView>
         </View>
       </View>

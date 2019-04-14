@@ -21,6 +21,7 @@
     "react-native": "0.59.2",
     "react-native-gesture-handler": "^1.1.0",
     "react-native-linear-gradient": "^2.5.4",
+    "react-native-maps": "^0.24.0",
     "react-native-snap-carousel": "^3.7.5",
     "react-native-swiper": "^1.5.14",
     "react-native-vector-icons": "latest",
