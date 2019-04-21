@@ -32,7 +32,7 @@ class HomeScreen extends Component {
             showsVerticalScrollIndicator={false}
             scrollEventThrottle={200}
             directionalLockEnabled={true}>
-              {/*<SlidingBanner data={Banners} withPagination={false} /> */}
+              {/*<SlidingBanner data={Banners} withPagination={false} />*/}
               <PromotionBanners />
               <ServiceContent/>
               <Promos/>

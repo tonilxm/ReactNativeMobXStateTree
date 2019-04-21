@@ -21,17 +21,26 @@ export const Banners = [
         longitude: -122.4324,
         latitudeDelta: 0.0922,
         longitudeDelta: 0.0421,
-      }
+      },
+      description: '<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution. The point of using Lorem Ipsum is that it has a more-or-less normal distribution.The point of using Lorem Ipsum is that it has a more-or-less normal distribution.The point of using Lorem Ipsum is that it has a more-or-less normal distribution</p>'
   },
   {
       id: 2,
       title: 'Sewa motor idaman buat gaya-gayaan, Jakarta',
       subtitle: 'Lorem ipsum dolor sit amet',
       illustration: 'https://i.ibb.co/Jj28P8S/motor-6.jpg',
+      star: 4,
       images: [
         'https://i.ibb.co/Jj28P8S/motor-6.jpg'
       ],
-      star: 4
+      geo_location: {
+        latitude: 37.78825,
+        longitude: -122.4324,
+        latitudeDelta: 0.0922,
+        longitudeDelta: 0.0421,
+      },
+      description: '<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution</p>'
+
   },
   {
       id:3, 
@@ -51,7 +60,8 @@ export const Banners = [
         latitudeDelta: 0.0922,
         longitudeDelta: 0.0421,
       },
-      star: 4
+      star: 4,
+      description: '<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution</p>'
   },
   {
       id: 4,
@@ -71,7 +81,8 @@ export const Banners = [
         latitudeDelta: 0.0922,
         longitudeDelta: 0.0421,
       },
-      star: 4
+      star: 4,
+      description: '<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution</p>'
   },
   {
       id: 5,
@@ -88,7 +99,8 @@ export const Banners = [
         latitudeDelta: 0.0922,
         longitudeDelta: 0.0421,
       },
-      star: 4
+      star: 4,
+      description: '<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution</p>'
   },
   {
       id: 6,
@@ -104,7 +116,8 @@ export const Banners = [
         latitudeDelta: 0.0922,
         longitudeDelta: 0.0421,
       },
-      star: 4
+      star: 4,
+    description: '<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution</p>'
   }
 ];
 

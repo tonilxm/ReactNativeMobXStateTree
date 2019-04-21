@@ -14,7 +14,7 @@ export class Button extends Component {
     return (
       <TouchableWithoutFeedback>
         <View style={{width: 'auto', height: 'auto', justifyContent: 'center',
-          alignItems: 'center', borderRadius: 8, ...buttonStyle  }}>
+          alignItems: 'center', ...buttonStyle  }}>
           <Text style={titleStyle}>{title}</Text>
         </View>
       </TouchableWithoutFeedback>

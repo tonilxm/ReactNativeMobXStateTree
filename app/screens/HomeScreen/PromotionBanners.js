@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import {View, Image,TouchableWithoutFeedback } from 'react-native'
 import Styles from './styles/PromotionBannersStyles'
 import Swiper from "react-native-swiper";
+import FastImage from 'react-native-fast-image'
 import { Banners } from '../../services/fixtures/Banners';
 import { withNavigation } from 'react-navigation';
 
@@ -20,7 +21,8 @@ class PromotionBanners extends Component {
     return data.map(house => 
       <TouchableWithoutFeedback key={house.id} onPress={() => this.showDetailScreen(house)}>
         <View style={Styles.slideContent}>
-          <Image source={{uri: house.illustration}} style={{ height: 140, width: 'auto' }} resizeMode='cover' resizeMethod='scale'/>
+          <FastImage source={{uri: house.illustration}} style={{ height: 140, width: 'auto' }}
+                     resizeMode={FastImage.resizeMode.cover} resizeMethod='scale'/>
         </View>
       </TouchableWithoutFeedback>
       
