@@ -7,7 +7,8 @@ import Swiper from 'react-native-swiper'
 import Styles from './styles/ImageSwiperStyles'
 import Header from '../../components/Header/Header';
 import AntIcon from 'react-native-vector-icons/dist/AntDesign'
-import { Colors, Fonts } from '../../themes';
+import { Colors, Fonts, Metrics } from '../../themes';
+import Lightbox from 'react-native-lightbox';
 
 class ImageSwiper extends Component {
   constructor(props) {
@@ -25,6 +26,19 @@ class ImageSwiper extends Component {
     });
   }
   
+  renderCarousel = (images) => {
+    return(
+      <Swiper loop={false} height={Styles.image.height} showsPagination={false} index={this.state.currentIdx}>
+        { images.map((img, index) => 
+          <View key={index} style={{justifyContent: 'center', alignContent: 'center'}}>
+            <FastImage source={{uri: img}}  style={{ width: Metrics.screenWidth, height: Metrics.screenHeight}}
+              resizeMode='contain'/>  
+          </View>
+        )}
+     </Swiper>  
+    )
+  } 
+
   renderImages = images => {
     const countImg = images.length
     return(
@@ -38,9 +52,11 @@ class ImageSwiper extends Component {
                   <ActivityIndicator/>
                 </View>
               }
-              <FastImage source={{uri: image}} style={Styles.image}
-                  onLoad={() => console.log('loading')}
-                  onLoadEnd={()=> this.setState({[idx]: false})} />
+              <Lightbox underlayColor="white" springConfig={{tension: 15, friction: 7}} 
+                swipeToDismiss={false} renderContent={() => this.renderCarousel(images)}>
+                <FastImage source={{uri: image}} style={Styles.image}
+                           onLoadEnd={()=> this.setState({[idx]: false})} />
+              </Lightbox>
             </View>
           </TouchableWithoutFeedback>
         )
@@ -77,7 +93,8 @@ class ImageSwiper extends Component {
               </TouchableWithoutFeedback>
             </View>}/>
         <View style={{ position: 'absolute', top: 0, left: 0}}>
-          <Swiper loop={true} height={Styles.image.height} showsPagination={false} onIndexChanged={(idx) => this.setState({currentIdx: idx})}>
+          <Swiper loop={false} height={Styles.image.height} showsPagination={false} index={currentIdx}
+                  onIndexChanged={(idx) => {  console.log('From Swiper current index:', idx); this.setState({currentIdx: idx})}} >
             { this.renderImages(images) }
           </Swiper>
         </View>
