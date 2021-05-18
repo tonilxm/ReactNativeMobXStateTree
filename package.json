@@ -19,7 +19,7 @@
     "prop-types": "latest",
     "react": "16.8.3",
     "react-native": "0.59.2",
-    "react-native-fast-image": "^5.2.0",
+    "react-native-fast-image": "^8.3.0",
     "react-native-gesture-handler": "^1.1.0",
     "react-native-lightbox": "^0.8.0",
     "react-native-linear-gradient": "^2.5.4",
